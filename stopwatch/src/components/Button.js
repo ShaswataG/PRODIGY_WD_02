@@ -11,6 +11,7 @@ export default function Btn(props) {
                 <div>
                     <button onClick={props.stop}>Stop</button>
                     <button onClick={props.reset}>Reset</button>
+                    <button onClick={props.flag}>Lap</button>
                 </div> 
                 : ""
             }
@@ -18,6 +19,7 @@ export default function Btn(props) {
                 <div>
                     <button onClick={props.resume}>Resume</button>
                     <button onClick={props.reset}>Reset</button>
+                    <button onClick={props.flag}>Lap</button>
                 </div> 
                 : ""
             }

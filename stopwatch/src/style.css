@@ -1,23 +1,36 @@
+html {
+    height: 100vh;
+}
+
 body {
-    
+    margin: 0;
+    height: 100%;
+    background: url('../public/images/protruding-squares.svg');
     /* background by SVGBackgrounds.com */
     /* padding: 30px; */
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
 }
 
 .clock {
-    height: 40px;
+    height: 600px;
+    min-height: 100px;
     width: 600px;
-    margin: 5% auto;
+    margin: 8% auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    gap: 20px;
+    /* justify-content: center; */
     padding: 10%;
     background: rgb(2,0,36);
     background: linear-gradient(137deg, rgba(2,0,36,1) 0%, rgba(34,40,49,1) 38%, rgba(180,179,179,1) 100%);
     color: white;
-    border-radius: 10px;
+    border-radius: 25px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: scroll;
 }
 
 .clock > div:first-of-type {
@@ -44,9 +57,107 @@ body {
     font-weight: 400;
     border: none;
     box-shadow: grey 0px 20px 30px -10px;
+    font-family: "Poppins", sans-serif;
     /* background-image: linear-gradient(165deg, black, grey); */
 }
 
 .button-container button:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-shadow: 1px 1px 1px grey, 0 0 25px white;
+}
+
+.display {
+    display: flex;
+}
+
+.display span {
+    width: 80px;
+    margin: 10px;
+    text-align: center;
+    /* display: inline-block; */
+}
+
+.lap-container {
+    display: grid;
+    flex-direction: column;
+    width: 400px;
+}
+
+.lap-container h4 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.7rem;
+    padding-bottom: 4px;
+    border-bottom: 1px solid white;
+}
+
+.lap-container span {
+    text-align: center;
+}
+
+.lap {
+    display: flex;
+    justify-content: space-between;
+    /* gap: 50px; */
+}
+
+.lap-number {
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+}
+
+.lap-time {
+    width: 80%;
+    text-align: center;
+}
+
+.lap span {
+    display: inline-block;
+    margin: 2px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.lap-time span {
+    display: inline-block;
+    width: 30px;
+    margin: 2px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.outer-container {
+    padding: 0;
+}
+
+@media (max-width: 850px) {
+    .clock {
+        height: 100px;
+        width: 70%;
+    }
+    .clock > div:first-of-type {
+        font-size: 3rem;
+    }
+    .button-container div {
+        display: flex;
+        gap: 15px;
+    }
+    span {
+        width: 40px;
+        margin: 5px;
+        text-align: center;
+        /* display: inline-block; */
+    }
+    .button-container button {
+        font-size: 2rem;
+        padding: 4px;
+        width: 140px;
+        text-align: center;
+        font-weight: 400;
+        border: none;
+        box-shadow: grey 0px 20px 30px -10px;
+        font-family: "Poppins", sans-serif;
+        /* background-image: linear-gradient(165deg, black, grey); */
+    }
 }
